@@ -1,14 +1,11 @@
 import React from "react"
+import "./style.css"
 
-function Card(){
+function Card(props){
     return (
-        <div class="row">
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"/>
-          </div>
+        <div class="col m4 image-wrap center">
+            <img className="character" src={props.image} alt={props.name}/>
         </div>
-      </div>
     )
 }
 

@@ -1,13 +1,13 @@
 import React from "react";
-import Score from "../Score"
 
-function Nav() {
+function Nav(props) {
     return (
         <nav>
-            <div className="nav-wrapper">
-                <a href="/" className="brand-logo">Clicky Game</a>
+            <div className="nav-wrapper blue darken-4">
+                <a href="/" className="brand-logo center">Clicky Game</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><Score/></li>
+                    <li><h5>Score:{props.score} | </h5></li>
+                    <li><h5>Top Score: {props.topScore}</h5></li>
                 </ul>
             </div>
         </nav>

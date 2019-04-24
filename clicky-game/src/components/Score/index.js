@@ -6,6 +6,7 @@ class Score extends Component {
         topScore:0,
     }
 
+
 }
 
 

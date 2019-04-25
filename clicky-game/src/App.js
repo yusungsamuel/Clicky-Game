@@ -29,7 +29,7 @@ const characters = [
     {
         name: "Bakugou",
         image: "https://orig00.deviantart.net/2b25/f/2016/201/f/8/fangirl_texts__bakugou_katsuki_x_fem_reader__by_jeluvs2laugh-daar4s9.jpg"
-    }, 
+    },
     {
         name: "Asui",
         image: "https://cdn.myanimelist.net/images/characters/10/299409.jpg"
@@ -41,15 +41,15 @@ const characters = [
     {
         name: "Yaoyorozu",
         image: "https://cdn.myanimelist.net/images/characters/12/344834.jpg"
-    }, 
+    },
     {
         name: "Tokoyami",
         image: "https://cdn.myanimelist.net/images/characters/13/299402.jpg"
     },
     {
-        name: "Shouji", 
+        name: "Shouji",
         image: "https://cdn.myanimelist.net/images/characters/2/300743.jpg"
-    }, 
+    },
     {
         name: "Ojiro",
         image: "https://cdn.myanimelist.net/images/characters/4/301035.jpg"
@@ -66,7 +66,7 @@ class App extends Component {
         this.setState({
             score: this.state.score + 1
         })
-        console.log(this.state.score)
+
     }
 
     render() {
@@ -81,8 +81,8 @@ class App extends Component {
                     {characters.map(character => {
                         return <Cards
                             key={character.name}
-                            name={character.name}
                             image={character.image}
+                            clicked="false"
                             addPoint={this.handleImageClick}
                         />
                     })}

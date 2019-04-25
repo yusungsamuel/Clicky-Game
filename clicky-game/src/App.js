@@ -62,11 +62,20 @@ class App extends Component {
         topScore: 0,
     }
 
-    handleImageClick = () => {
-        this.setState({
-            score: this.state.score + 1
-        })
+    handleScore = () => {
+        if(this.state.score <= this.state.topScore ){
+            this.setState({
+                score: this.state.score + 1,
+                topScore: this.state.topScore + 1
+            })
+        }
 
+    }
+
+    resetGame = () => {
+        this.setState ({
+            score: 0
+        })
     }
 
     render() {
@@ -82,8 +91,8 @@ class App extends Component {
                         return <Cards
                             key={character.name}
                             image={character.image}
-                            clicked="false"
-                            addPoint={this.handleImageClick}
+                            addPoint={this.handleScore}
+                            reset={this.resetGame}
                         />
                     })}
                 </div>

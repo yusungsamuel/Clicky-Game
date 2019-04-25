@@ -13,6 +13,9 @@ class Card extends Component {
             })
             this.props.addPoint()
         }
+        else {
+            this.props.reset()
+        }
     }
 
     render() {

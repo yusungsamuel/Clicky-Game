@@ -62,6 +62,12 @@ class App extends Component {
         topScore: 0,
     }
 
+    handleImageClick = () => {
+        this.setState({
+            score: this.state.score + 1
+        })
+        console.log(this.state.score)
+    }
 
     render() {
         return (
@@ -74,8 +80,10 @@ class App extends Component {
                 <div className="container image-container">
                     {characters.map(character => {
                         return <Cards
+                            key={character.name}
                             name={character.name}
                             image={character.image}
+                            addPoint={this.handleImageClick}
                         />
                     })}
                 </div>

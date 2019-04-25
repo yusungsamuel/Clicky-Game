@@ -1,10 +1,13 @@
 .image-wrap {
-    width: 25%
+    width: 23%;
+    max-height: 200px;
+    margin: 1%
 }
 
 .character {
-    object-fit:cover;
+    object-fit: cover;
     object-position: top;
-    height: 200px;
-    width:200px;
+    width: 200px;
+    height: 200px; 
+    max-width: 100%;
 }

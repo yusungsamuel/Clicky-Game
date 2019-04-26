@@ -1,7 +1,7 @@
 .image-wrap {
     width: 23%;
     max-height: 200px;
-    margin: 1%
+    margin: 1%;
 }
 
 .character {
@@ -10,4 +10,30 @@
     width: 200px;
     height: 200px; 
     max-width: 100%;
+    border-radius: 5%
 }
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .pulsed:hover{
+    animation-name: pulse;
+    cursor: pointer;
+  }

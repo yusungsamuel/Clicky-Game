@@ -5,3 +5,12 @@
     background-size: cover;
     height:400px;
 }
+
+.text-box {
+    margin:auto;
+    width:50%
+}
+
+.text {
+    font-size: 50px;
+}

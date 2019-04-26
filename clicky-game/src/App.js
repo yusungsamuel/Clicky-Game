@@ -77,6 +77,7 @@ class App extends Component {
                             image={hero.image}
                             clickStatus={hero.clicked}
                             handleClick= {this.handleClick}
+                            
                         />
                     })}
                 </div>

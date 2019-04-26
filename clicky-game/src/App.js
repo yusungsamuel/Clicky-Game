@@ -9,7 +9,8 @@ class App extends Component {
     state = {
         heroes,
         score: 0,
-        topScore: 0
+        topScore: 0,
+        message:"click any card to start"
     }
 
 
@@ -41,7 +42,8 @@ class App extends Component {
             score = 0
             this.setState({
                 score,
-                heroes
+                heroes,
+                message:"You Guessed Wrong, Press Any Hero To Play Again"
             })
             console.log(heroes)
 
@@ -67,6 +69,7 @@ class App extends Component {
                 <Nav
                     score={this.state.score}
                     topScore={this.state.topScore}
+                    message={this.state.message}
                 />
                 <Jumbotron></Jumbotron>
                 <div className="container image-container">

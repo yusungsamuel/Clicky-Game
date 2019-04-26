@@ -1,3 +1,16 @@
+body {
+    background-image: url("https://vignette.wikia.nocookie.net/bokunoheroacademia/images/5/50/Wiki-background/revision/latest?cb=20151028231209");
+    image-rendering: -webkit-optimize-contrast;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed; 
+    background-size: cover;
+    min-height: 100vh;
+}
+
 .image-container {
     display: flex; 
     flex-wrap: wrap-reverse
@@ -6,3 +19,8 @@
 .text {
     font-family: 'Cute Font', cursive;
 }
+
+/* nav {
+    position: fixed;
+    top: 0;
+} */

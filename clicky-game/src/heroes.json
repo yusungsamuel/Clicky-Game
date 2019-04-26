@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Midoriya",
+        "image": "http://images.shoutwiki.com/nothingiscanon/8/80/Midoriya.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Todoroki",
+        "image": "https://cdn.myanimelist.net/images/characters/3/299595.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Jirou",
+        "image": "https://cdn.myanimelist.net/images/characters/16/300747.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Ochako",
+        "image": "https://i.pinimg.com/originals/a8/c8/90/a8c890426cbd25652c62ae3e1e07ccb6.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Denki",
+        "image": "https://cdn.myanimelist.net/images/characters/13/299425.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Bakugou",
+        "image": "https://orig00.deviantart.net/2b25/f/2016/201/f/8/fangirl_texts__bakugou_katsuki_x_fem_reader__by_jeluvs2laugh-daar4s9.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Asui",
+        "image": "https://cdn.myanimelist.net/images/characters/10/299409.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Mineta",
+        "image": "https://cdn.myanimelist.net/images/characters/10/299413.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Yaoyorozu",
+        "image": "https://cdn.myanimelist.net/images/characters/12/344834.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Tokoyami",
+        "image": "https://cdn.myanimelist.net/images/characters/13/299402.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Shouji",
+        "image": "https://cdn.myanimelist.net/images/characters/2/300743.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Ojiro",
+        "image": "https://cdn.myanimelist.net/images/characters/4/301035.jpg",
+        "clicked": false
+    }
+]

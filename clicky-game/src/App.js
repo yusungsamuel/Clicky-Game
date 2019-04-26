@@ -1,81 +1,64 @@
 import React, { Component } from 'react';
-import Nav from "./components/Nav"
-import Jumbotron from "./components/Jumbotron"
-import Cards from "./components/cards"
-import "./style.css"
-
-const characters = [
-    {
-        name: "Midoriya",
-        image: "http://images.shoutwiki.com/nothingiscanon/8/80/Midoriya.jpg"
-    },
-    {
-        name: "Todoroki",
-        image: "https://cdn.myanimelist.net/images/characters/3/299595.jpg"
-
-    },
-    {
-        name: "Jirou",
-        image: "https://cdn.myanimelist.net/images/characters/16/300747.jpg"
-    },
-    {
-        name: "Ochako",
-        image: "https://i.pinimg.com/originals/a8/c8/90/a8c890426cbd25652c62ae3e1e07ccb6.jpg"
-    },
-    {
-        name: "Denki",
-        image: "https://cdn.myanimelist.net/images/characters/13/299425.jpg"
-    },
-    {
-        name: "Bakugou",
-        image: "https://orig00.deviantart.net/2b25/f/2016/201/f/8/fangirl_texts__bakugou_katsuki_x_fem_reader__by_jeluvs2laugh-daar4s9.jpg"
-    },
-    {
-        name: "Asui",
-        image: "https://cdn.myanimelist.net/images/characters/10/299409.jpg"
-    },
-    {
-        name: "Mineta",
-        image: "https://cdn.myanimelist.net/images/characters/10/299413.jpg"
-    },
-    {
-        name: "Yaoyorozu",
-        image: "https://cdn.myanimelist.net/images/characters/12/344834.jpg"
-    },
-    {
-        name: "Tokoyami",
-        image: "https://cdn.myanimelist.net/images/characters/13/299402.jpg"
-    },
-    {
-        name: "Shouji",
-        image: "https://cdn.myanimelist.net/images/characters/2/300743.jpg"
-    },
-    {
-        name: "Ojiro",
-        image: "https://cdn.myanimelist.net/images/characters/4/301035.jpg"
-    }
-];
+import Nav from "./components/Nav";
+import Jumbotron from "./components/Jumbotron";
+import Cards from "./components/cards";
+import "./style.css";
+import heroes from "./heroes.json";
 
 class App extends Component {
     state = {
+        heroes,
         score: 0,
-        topScore: 0,
+        topScore: 0
     }
 
-    handleScore = () => {
-        if(this.state.score <= this.state.topScore ){
-            this.setState({
-                score: this.state.score + 1,
-                topScore: this.state.topScore + 1
-            })
+
+    handleClick = (id) => {
+        let score = this.state.score
+        let topScore = this.state.topScore
+        let hero = this.state.heroes.filter( hero => hero.id === id)[0]
+
+        this.shuffle(heroes)
+
+        //if unclicked image is clicked
+        if(!hero.clicked){
+            hero.clicked = true;
+            console.log(hero);
+            score += 1;
+            if(score > topScore){
+                topScore = score
+            }
+            this.setState({score, topScore, heroes})
+            console.log(heroes)
+
         }
 
+        //when duplicate is clicked
+        else{
+            this.state.heroes.map(hero => 
+                 hero.clicked = false
+            )
+            score = 0
+            this.setState({
+                score,
+                heroes
+            })
+            console.log(heroes)
+
+        }
+
+
     }
 
-    resetGame = () => {
-        this.setState ({
-            score: 0
-        })
+    shuffle = (array) => {
+        let j, temp, i;
+        for (i = array.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
     }
 
     render() {
@@ -87,12 +70,13 @@ class App extends Component {
                 />
                 <Jumbotron></Jumbotron>
                 <div className="container image-container">
-                    {characters.map(character => {
+                    {heroes.map(hero => {
                         return <Cards
-                            key={character.name}
-                            image={character.image}
-                            addPoint={this.handleScore}
-                            reset={this.resetGame}
+                            id = {hero.id}
+                            key={hero.name}
+                            image={hero.image}
+                            clickStatus={hero.clicked}
+                            handleClick= {this.handleClick}
                         />
                     })}
                 </div>

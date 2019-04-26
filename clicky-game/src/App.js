@@ -29,7 +29,11 @@ class App extends Component {
             if(score > topScore){
                 topScore = score
             }
-            this.setState({score, topScore, heroes})
+            this.setState({
+                score, 
+                topScore, 
+                heroes, 
+                message:"Correct"})
             console.log(heroes)
 
         }
